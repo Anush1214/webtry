@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "“The hardest financial skill is getting the goalpost to stop moving.”",
       "“Saving is the gap between your ego and your income.”",
       "“Do not save what is left after spending, but spend what is left after saving.”",
-      "“You will change your life by changing your spending habits.”"
+      "“You will change your life by changing your spending habits.”",
+      "“History is the study of change,ironically used as a mapp of the future.”",
+      "“The most important part of the plan is planning on yourplan not goin according to plan”"
   ];
 
   // Randomly select a quote
