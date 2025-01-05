@@ -14,6 +14,25 @@ body {
     overflow-x: hidden;
 }
 
+/* Parallax Scrolling Effect */
+.parallax {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    perspective: 1px;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    background: radial-gradient(circle, #0b0c10 40%, #1f2833); /* Smooth gradient effect */
+}
+
 /* Intro Page */
 #intro-page {
     display: flex;
@@ -21,18 +40,18 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    background: #0b0c10;
     overflow: hidden;
 }
 
 .intro-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.8), #0b0c10);
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .intro-content {
-    z-index: 1;
+    z-index: 2;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
 }
