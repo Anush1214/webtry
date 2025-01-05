@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSUKI | Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Intro Page -->
+    <div id="intro-page">
+        <div class="intro-overlay"></div>
+        <div class="intro-content">
+            <h1 class="intro-title">TSUKI</h1>
+            <p class="intro-subtitle">Track smarter. Spend better. Live wiser.</p>
+            <div class="quotes-section">
+                <p id="quote" class="quote"></p>
+            </div>
+            <button id="enter-site" class="btn">Enter</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <header>
+            <h1>Welcome to TSUKI</h1>
+            <p>Your premium expense tracking solution</p>
+        </header>
+        <main>
+            <!-- Insights Section -->
+            <div class="insights">
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p id="total-expenses">₹0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Average Expense</h3>
+                    <p id="average-expense">₹0.00</p>
+                </div>
+                <div class="card">
+                    <h3>Highest Expense</h3>
+                    <p id="highest-expense">₹0.00</p>
+                </div>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <h2>Add New Expense</h2>
+                <div class="input-box">
+                    <input type="number" id="amount" placeholder="Enter amount (INR)" />
+                </div>
+                <div class="input-box">
+                    <input type="text" id="category" placeholder="Enter category (e.g., Food, Travel)" />
+                </div>
+                <button id="add-expense" class="btn">➕ Add Expense</button>
+            </div>
+
+            <!-- Expense List Section -->
+            <div class="expense-list-section">
+                <h2>Expense Categories</h2>
+                <ul id="expense-list"></ul>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-section">
+                <h2>Category Breakdown</h2>
+                <canvas id="expense-chart"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2025 TSUKI. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
