@@ -280,3 +280,245 @@ button {
 button:hover {
     background-color: #45a29e;
 }
+
+/* Theme Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #66fcf1;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+#theme-label {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #c5c6c7;
+}
+
+/* Theme Transition */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Light Theme Overrides */
+body.light-mode {
+    background: #ffffff;
+    color: #333333;
+}
+
+body.light-mode header h1 {
+    color: #333333;
+}
+
+body.light-mode .card {
+    background: #f9f9f9;
+    color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .btn {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.light-mode .btn:hover {
+    background-color: #555555;
+}
+
+body.light-mode footer {
+    background: #f1f1f1;
+    color: #333333;
+}
+
+body.light-mode .input-box input {
+    background-color: #f9f9f9;
+    color: #333333;
+    border-color: #ccc;
+}
+
+body.light-mode .input-box input:focus {
+    background-color: #ffffff;
+    border-color: #333333;
+}
+
+body.light-mode .expense-list-section li {
+    background: #f9f9f9;
+    color: #333333;
+}
+
+body.light-mode .chart-section h2 {
+    color: #333333;
+}
+
+/* General Responsive Settings */
+@media (max-width: 1200px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 3.5rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .card {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .input-box {
+        width: 90%;
+    }
+
+    canvas {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 2.5rem;
+    }
+
+    .intro-subtitle {
+        font-size: 1rem;
+    }
+
+    .input-section h2,
+    .chart-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .input-box input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .expense-list-section li {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .insights {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .expense-list-section li {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+footer {
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+/* Money-Saving Tips Section */
+.money-tips-section {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: #1f2833;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 2.5s ease-in-out;
+}
+
+.money-tips-section h2 {
+    font-size: 2rem;
+    color: #66fcf1;
+    margin-bottom: 20px;
+}
+
+.money-tips {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #c5c6c7;
+    padding: 10px;
+    background: #0b0c10;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.money-tips p {
+    margin: 0;
+}
+
+.money-tips.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
